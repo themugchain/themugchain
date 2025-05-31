@@ -98,89 +98,59 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
 <div id="certificationSection" class="section">
   <p><strong>Coming soon. Invite only for now!</strong></p>
 
-  <form
-    id="certificateForm"
-    action="https://api.web3forms.com/submit"
-    method="POST"
-    enctype="multipart/form-data"
-  >
-    <!-- Your Web3Forms access key -->
-    <input
-      type="hidden"
-      name="access_key"
-      value="4aa765b9-61a1-4e9e-a00d-5d8a7ba7f380"
-    />
+  <form action="https://api.web3forms.com/submit" method="POST">
 
-    <!-- Optional: customize the email subject line -->
-    <input
-      type="hidden"
-      name="subject"
-      value="New Mug Certification Request"
-    />
+    <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
+    <!-- Create your Access key here: https://web3forms.com/ -->
+    <!-- <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE"> -->
+    <input type="hidden" name="access_key" value="4aa765b9-61a1-4e9e-a00d-5d8a7ba7f380">
 
-    <!-- 1) Email field (required by Web3Forms) -->
-    <label for="email">Email address</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="you@example.com"
-      required
-    />
+    <!-- Optional: Can be type="hidden" or type="text" for subject -->
+    <input type="hidden" name="subject" value="New Submission from Web3Forms">
+  
+    <!-- Optional: From Name you want to see in the email
+          Default is "Notifications". you can overwrite here -->
+    <input type="hidden" name="from_name" value="Your Website Name">
+  
+    <!-- Optional: To send the form submission as CC email -->
+    <input type="hidden" name="ccemail" value="partner@example.com">
 
-    <!-- 2) Geographical origin -->
-    <label for="origin">Geographical origin</label>
-    <input
-      type="text"
-      id="origin"
-      name="origin"
-      placeholder="e.g. Denmark"
-      required
-    />
+    <!-- Optional: default replyto will be "email" (if available), 
+         you may overwrite here -->
+    <input type="hidden" name="replyto" value="troels@mbfv2.dk">
+    
 
-    <!-- 3) Historical provenance -->
-    <label for="provenance">Historical provenance</label>
-    <input
-      type="text"
-      id="provenance"
-      name="provenance"
-      placeholder="e.g. 18th century"
-      required
-    />
+    <!-- Required: if submitting without Javascript 
+         (because by default web3form outputs json) -->
 
-    <!-- 4) First owner (can be anonymous) -->
-    <label for="owner">First owner (can be anonymous)</label>
-    <input
-      type="text"
-      id="owner"
-      name="owner"
-      placeholder="e.g. Anonymous"
-      required
-    />
+    <!-- If javascript, use "window.location.hash" for redirects -->
+    <input type="hidden" name="redirect" value="https://web3forms.com/success">
 
-    <!-- 5) Attach a picture of your mug -->
-    <label for="attachments">Attach a picture of your mug</label>
-    <input
-      type="file"
-      id="attachments"
-      name="attachments"
-      accept="image/*"
-      required
-    />
+    <!-- Optional: But Recommended: To Prevent SPAM Submission. 
+         Make sure its hidden by default -->
+    <input type="checkbox" name="botcheck" id="" style="display: none;">
+    
+    <!-- Webhooks: Send your form data to Notion, Google Sheets or Zapier.
+         This feature available to PRO & Starter Plan users only -->
+    <input type="hidden" name="webhook" value="WEBHOOK_URL_HERE" />
 
-    <!-- 6) Promo code -->
-    <label for="promo">Promo code</label>
-    <input
-      type="text"
-      id="promo"
-      name="promo"
-      placeholder="e.g. muglover3000"
-      required
-    />
+    <!-- Google reCaptcha v3: To Prevent SPAM Submission.PRO Plan only -->
+    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
+    
+    <!-- Attachments: Make sure the <form> has enctype="multipart/form-data"
+         This feature available to PRO Plan users only -->
+    <input type="file" name="attachment" />
 
-    <button type="submit">Submit for Certification</button>
-  </form>
-</div>
+    <!-- Custom Form Data: 
+     Then you can include your own form data you wish to receive in email. -->
+    <input type="email" name="email" required>
+    <input type="text" name="First Name" required>
+    <input type="text" name="Phone Number" required>
+    <textarea name="message" cols="30" rows="10" required></textarea>
+
+    <button type="submit">Submit Form</button>
+
+</form></div>
   <div id="newsletterSection" class="section">
     <p>Coming soon!</p>
   </div>
