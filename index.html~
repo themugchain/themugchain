@@ -95,9 +95,8 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
       </table>
     </div>
   </div>
-
 <div id="certificationSection" class="section">
-  <p><strong>Coming soon.Invite only for now!</strong></p>
+  <p><strong>Coming soon. Invite only for now!</strong></p>
 
   <form
     id="certificateForm"
@@ -105,17 +104,31 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
     method="POST"
     enctype="multipart/form-data"
   >
-    <!-- Replace with your actual Web3Forms access key -->
-    <input type="hidden" name="access_key" value="4aa765b9-61a1-4e9e-a00d-5d8a7ba7f380" />
-    <!-- Optional: set a subject line for the email you’ll receive -->
+    <!-- Your Web3Forms access key -->
+    <input
+      type="hidden"
+      name="access_key"
+      value="4aa765b9-61a1-4e9e-a00d-5d8a7ba7f380"
+    />
+
+    <!-- Optional: customize the email subject line -->
     <input
       type="hidden"
       name="subject"
       value="New Mug Certification Request"
     />
-    <!-- Optional: redirect user after successful submission -->
-    <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you.html" /> -->
 
+    <!-- 1) Email field (required by Web3Forms) -->
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      id="email"
+      name="email"
+      placeholder="you@example.com"
+      required
+    />
+
+    <!-- 2) Geographical origin -->
     <label for="origin">Geographical origin</label>
     <input
       type="text"
@@ -125,6 +138,7 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
       required
     />
 
+    <!-- 3) Historical provenance -->
     <label for="provenance">Historical provenance</label>
     <input
       type="text"
@@ -134,6 +148,7 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
       required
     />
 
+    <!-- 4) First owner (can be anonymous) -->
     <label for="owner">First owner (can be anonymous)</label>
     <input
       type="text"
@@ -143,15 +158,17 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
       required
     />
 
-    <label for="image">Attach a picture of your mug</label>
+    <!-- 5) Attach a picture of your mug -->
+    <label for="attachments">Attach a picture of your mug</label>
     <input
       type="file"
-      id="image"
-      name="image"
+      id="attachments"
+      name="attachments"
       accept="image/*"
       required
     />
 
+    <!-- 6) Promo code -->
     <label for="promo">Promo code</label>
     <input
       type="text"
@@ -160,15 +177,7 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
       placeholder="e.g. muglover3000"
       required
     />
-    <!-- 1) Add Email field so Web3Forms knows where to send notification -->
-    <label for="email">Email address</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      placeholder="you@example.com"
-      required
-    />
+
     <button type="submit">Submit for Certification</button>
   </form>
 </div>
