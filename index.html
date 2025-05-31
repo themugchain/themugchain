@@ -96,28 +96,74 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
     </div>
   </div>
 
-  <div id="certificationSection" class="section">
-    <p><strong>Coming soon but invite only for now!</strong></p>
-    <form id="certificateForm" action="mailto:troels@mbfv2.dk?subject=Certification%20request" method="post" enctype="text/plain">
-      <label for="origin">Geographical origin</label>
-      <input type="text" id="origin" name="origin" placeholder="e.g. Denmark" required>
+<div id="certificationSection" class="section">
+  <p><strong>Coming soon.Invite only for now!</strong></p>
 
-      <label for="provenance">Historical provenance</label>
-      <input type="text" id="provenance" name="provenance" placeholder="e.g. 18th century" required>
+  <form
+    id="certificateForm"
+    action="https://api.web3forms.com/submit"
+    method="POST"
+    enctype="multipart/form-data"
+  >
+    <!-- Replace with your actual Web3Forms access key -->
+    <input type="hidden" name="access_key" value="4aa765b9-61a1-4e9e-a00d-5d8a7ba7f380" />
+    <!-- Optional: set a subject line for the email you’ll receive -->
+    <input
+      type="hidden"
+      name="subject"
+      value="New Mug Certification Request"
+    />
+    <!-- Optional: redirect user after successful submission -->
+    <!-- <input type="hidden" name="redirect" value="https://yourdomain.com/thank-you.html" /> -->
 
-      <label for="owner">First owner (can be anonymous)</label>
-      <input type="text" id="owner" name="owner" placeholder="e.g. Anonymous" required>
+    <label for="origin">Geographical origin</label>
+    <input
+      type="text"
+      id="origin"
+      name="origin"
+      placeholder="e.g. Denmark"
+      required
+    />
 
-      <label for="image">Attach a picture of your mug</label>
-      <input type="file" id="image" name="image" accept="image/*" required>
+    <label for="provenance">Historical provenance</label>
+    <input
+      type="text"
+      id="provenance"
+      name="provenance"
+      placeholder="e.g. 18th century"
+      required
+    />
 
-      <label for="promo">Promo code</label>
-      <input type="text" id="promo" name="promo" placeholder="e.g. muglover3000" required>
+    <label for="owner">First owner (can be anonymous)</label>
+    <input
+      type="text"
+      id="owner"
+      name="owner"
+      placeholder="e.g. Anonymous"
+      required
+    />
 
-      <button type="submit">Submit for Certification</button>
-    </form>
-  </div>
+    <label for="image">Attach a picture of your mug</label>
+    <input
+      type="file"
+      id="image"
+      name="image"
+      accept="image/*"
+      required
+    />
 
+    <label for="promo">Promo code</label>
+    <input
+      type="text"
+      id="promo"
+      name="promo"
+      placeholder="e.g. muglover3000"
+      required
+    />
+
+    <button type="submit">Submit for Certification</button>
+  </form>
+</div>
   <div id="newsletterSection" class="section">
     <p>Coming soon!</p>
   </div>
