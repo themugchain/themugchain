@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retro Front Page</title>
+  <style>
+    html { overflow-y: scroll }
+    body {
+      background: #f0f0f0;
+      font-family: 'Courier New', monospace;
+      margin: 0; padding: 0;
+      display: flex; flex-direction: column; min-height: 100vh;
+    }
+    nav {
+      background: #d3d3d4;
+      padding:10px;
+      display:flex; justify-content:center;
+      box-shadow:0 1px 3px rgba(0,0,0,0.2);
+    }
+    nav a {margin:0 15px; color:black; text-decoration:none; font-weight:bold; cursor:pointer}
+    .section {display:none; flex:1; padding:20px;}
+    #homeSection, #faqSection {
+      display:flex; flex-direction:column; align-items:flex-start;
+      text-align:left;
+    }
+    #homeContent, #faqContent {
+      max-width:800px; white-space:pre-line; line-height:1.5; margin:auto;
+    }
+    #ledgerSection {
+      display:flex; flex-direction:column; align-items:center;
+    }
+    #tableContainer {width:100%; display:flex; justify-content:center}
+    .excel-table {border-collapse:collapse;box-shadow:0 0 5px rgba(0,0,0,0.1);background:#fff;}
+    .excel-table th, .excel-table td {border:1px solid #ccc; padding:6px 12px; text-align:left}
+    .excel-table th {background:#d3d3d3; text-align:center; font-weight:bold}
+    #certificationSection {
+      display:flex; flex-direction:column; align-items:center;
+    }
+    #certificateForm {display:flex; flex-direction:column; max-width:400px; width:100%; margin:auto}
+    #certificateForm label {margin-top:10px; font-weight:bold}
+    #certificateForm input {width:100%; padding:6px; margin-top:4px; font-family:inherit; box-sizing:border-box}
+    #certificateForm button {margin-top:15px; padding:8px 12px; font-family:inherit; font-weight:bold; cursor:pointer; border:1px solid #000; background:#e0e0e0}
+    #newsletterSection {display:flex; flex-direction:column; align-items:center; text-align:center}
+  </style>
+</head>
+<body>
+  <nav>
+    <a id="navHome">Ceramic white paper</a>
+    <a id="navLedger">Mug ledger</a>
+    <a id="navCertification">Certification shop</a>
+    <a id="navNewsletter">Newsletter</a>
+    <a id="navFaq">FAQ</a>
+  </nav>
+
+  <div id="homeSection" class="section">
+    <div id="homeContent">
+The curved beauty, durable compound materials and sheer raw utility of the modern mug... It is easy to forget just how far mug technology have come from neolithic times and until today.
+
+Combined with the brittle elegance and soft whisper of a thousand consumed beverages, that places that unique nostalgic worth on each older mug, reminding us of a time long past but not yet forgotten.
+
+And on the mug chain it never will!
+
+All the advantages of the block chain and none of the shortcomings! Backed by cold, hard ceramics!
+
+No longer are your mug just sitting in the cupboard or on the office kitchen table. Now it can also sit on the mug chain, digitally!
+
+Diversify your physical assets without divesting them!
+
+A certified mug on the mug chain becomes more desirable over time, probably*, accruing not only physical patina, but digital as well! That is twice the amount of patina in the same amount of time!
+
+Inheriting a mug that's on the mug chain takes it from "moms ol mug" and to a desirable collectible your kids are sure to fight** over!
+
+Before today mug buyers when reviewing a mug have often asked "Is that all?" and up until now it sadly was. Now you can proudly say "This mug has been on the mug chain since 2025!" and sit back as the bidding starts!
+
+Become part of the very first cohorts of mug chainiacs, as they so fondly call themselves, and <a href="#certificationSection">GET YOUR MUG CERTIFIED AND ON THE MUG CHAIN TODAY!</a>
+
+Before you only owned your mug physically, but now you can also own it digitally! With our certificate of certification you will even have proof! This also enables you to SELL your mug digitally, but keep it physically! Just one of the many benefits of mugenomics!
+
+And if, sadly, your mug becomes unmade in a child and/or alcohol related incident, the memory of that sweet, sweet mug will never dim, but live on forever, on the mug chain.
+
+* Probably not
+
+** Possibly to the death
+
+- Copenhagen 23/5/2024
+    </div>
+  </div>
+
+  <div id="ledgerSection" class="section">
+    <div id="tableContainer">
+      <table class="excel-table">
+        <thead><tr><th>MUGID#</th><th>Geographical origin</th><th>Historical provenance</th><th>First owner</th><th>Image link</th></tr></thead>
+        <tbody><!-- loaded by JS --></tbody>
+      </table>
+    </div>
+  </div>
+
+  <div id="certificationSection" class="section">
+    <p><strong>Coming soon but invite only for now!</strong></p>
+    <form id="certificateForm" action="/api/certify" method="post" enctype="multipart/form-data">
+      <label for="origin">Geographical origin</label>
+      <input type="text" id="origin" name="origin" placeholder="e.g. Denmark" required>
+
+      <label for="provenance">Historical provenance</label>
+      <input type="text" id="provenance" name="provenance" placeholder="e.g. 18th century" required>
+
+      <label for="owner">First owner (can be anonymous)</label>
+      <input type="text" id="owner" name="owner" placeholder="e.g. Anonymous" required>
+
+      <label for="image">Attach a picture of your mug</label>
+      <input type="file" id="image" name="image" accept="image/*" required>
+
+      <label for="promo">Promo code</label>
+      <input type="text" id="promo" name="promo" placeholder="e.g. muglover3000" required>
+
+      <button type="submit">Submit for Certification</button>
+    </form>
+  </div>
+
+  <div id="newsletterSection" class="section">
+    <p>Coming soon!</p>
+  </div>
+
+  <div id="faqSection" class="section">
+    <div id="faqContent">
+Q: Is this a real thing?
+A: Yes! You will receive either a digital certificate you can print yourselves + have your mug featured on the mug chain or you can order a very fancy paper certificate!
+
+Q: How do I even get started?
+A: Go to the certification shop and fill out the form, send in a picture of your mug and you are go. I´ll even throw in a discount; 10% discount code: muglover3000.
+
+Q: Would you recommend a good starter mug?
+A: Absolutely, head on over to <a href="https://www.instagram.com/goblinfab/" target="_blank">@goblinfab</a>, that guy could seriously use some cash.
+
+Q: Is this a great gift?
+A: Yes! Giving a mug is fine, but giving a mug that is already on the mug chain is much better. You can also snap a picture of a friend or loved ones mug without them knowing, get it on the mug chain and then gift them the certificate. Imagine their surprise!
+
+Q: How is the mug chain stored?
+A: An excellent question. We provide triple security; first the ledger is copied to this very website. Second the actual ledger is kept safe and sound on a flash drive inside a mug! The very definition of cold storage! And third we store the images on Instagram for all potential buyers to see!
+
+Q: Who owns the digital mug?
+A: Who runs the world?
+
+Q: Who is the normal mug chainiac?
+A: Glad you asked. Old European Royalty mainly*, but also just business savvy people looking to diversify their physical assets without divesting**.
+
+Q: Can I have my mug on the mug chain more than once?
+A: Yes! This is called fractional mugging. Imagine you buy a fresh mug and put it on the mug chain, now weeks later it has gone from a new mug to your favorite mug. You can have that be reflected on the mug chain, by buying a new certificate for the same mug while still having your old certificate be just as valid! It is still the same clump of atoms after all.
+
+Q: Who invented mugenomics?
+A: Some guy.. maybe at either Wharton, Harvard or LSE. Look it does not matter since it is a so well established part of economic theory now. You don´t remember who came up with Porters five forces anymore either.
+
+Q: Why the focus on ceramics?
+A: We love all mug making materials equally but there is still something special about that white mug. It is the canvas on which the coffee bean paints its soul you might say.
+
+Q: How come nobody have done this before?
+A: Well, if you know the egg is round you might not balance it. Fortunately for you we only serve square eggs here at the mug chain!
+
+* Probably not.
+** Ehh
+    </div>
+  </div>
+
+  <script>
+    const ledgerCsvPath = './folder/mugledger.csv';
+    const sections = {
+      home: document.getElementById('homeSection'),
+      ledger: document.getElementById('ledgerSection'),
+      certification: document.getElementById('certificationSection'),
+      newsletter: document.getElementById('newsletterSection'),
+      faq: document.getElementById('faqSection')
+    };
+    const hashMap = {
+      '#homeSection': 'home',
+      '#ledgerSection': 'ledger',
+      '#certificationSection': 'certification',
+      '#newsletterSection': 'newsletter',
+      '#faqSection': 'faq'
+    };
+    function showSection(name) {
+      Object.values(sections).forEach(sec => sec.style.display = 'none');
+      sections[name].style.display = 'flex';
+      if (name === 'ledger') loadLedger();
+    }
+    document.getElementById('navHome').addEventListener('click', () => { showSection('home'); history.replaceState(null, '', '#homeSection'); });
+    document.getElementById('navLedger').addEventListener('click', () => { showSection('ledger'); history.replaceState(null, '', '#ledgerSection'); });
+    document.getElementById('navCertification').addEventListener('click', () => { showSection('certification'); history.replaceState(null, '', '#certificationSection'); });
+    document.getElementById('navNewsletter').addEventListener('click', () => { showSection('newsletter'); history.replaceState(null, '', '#newsletterSection'); });
+    document.getElementById('navFaq').addEventListener('click', () => { showSection('faq'); history.replaceState(null, '', '#faqSection'); });
+    window.addEventListener('hashchange', () => {
+      const sectionName = hashMap[location.hash];
+      if (sectionName) showSection(sectionName);
+    });
+    if (hashMap[location.hash]) {
+      showSection(hashMap[location.hash]);
+    } else {
+      showSection('home');
+    }
+    function loadLedger() {
+      fetch(ledgerCsvPath)
+        .then(res => res.text())
+        .then(text => {
+          const rows = text.trim().split(/\r?\n/);
+          const data = rows.map(r => r.split(';'));
+          const tbody = document.querySelector('#ledgerSection .excel-table tbody');
+          tbody.innerHTML = '';
+          data.forEach(row => {
+            const tr = document.createElement('tr');
+            ['MUGID#','Geographical origin','Historical provenance','First owner','Image link'].forEach((header,j) => {
+              const td=document.createElement('td');const cell=row[j]||'';
+              if(header==='Image link'&&cell){const a=document.createElement('a');a.href=cell;a.textContent=cell;a.target='_blank';td.appendChild(a);}else td.textContent=cell;
+              tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+          });
+        })
+        .catch(err=>console.error('Failed to load ledger:',err));
+    }
+    document.getElementById('certificateForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const formData = new FormData(form);
+      fetch(form.action, {
+        method: form.method,
+        body: formData
+      })
+      .then(res => {
+        if (res.ok) alert('Certification request submitted!');
+        else alert('Submission failed: ' + res.status + ' ' + res.statusText);
+      })
+      .catch(err => alert('Error submitting: ' + err));
+    });
+  </script>
+</body>
+</html>
