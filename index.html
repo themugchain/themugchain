@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Mug Chain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Retro Front Page</title>
   <style>
-    html { overflow-y: scroll }
+    html { overflow-y: scroll; }
     body {
       background: #f0f0f0;
       font-family: 'Courier New', monospace;
@@ -14,34 +14,96 @@
     }
     nav {
       background: #d3d3d4;
-      padding:10px;
-      display:flex; justify-content:center;
-      box-shadow:0 1px 3px rgba(0,0,0,0.2);
+      padding: 10px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
-    nav a {margin:0 15px; color:black; text-decoration:none; font-weight:bold; cursor:pointer}
-    .section {display:none; flex:1; padding:20px;}
+    nav a {
+      margin: 5px 10px;
+      color: black;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .section {
+      display: none;
+      flex: 1;
+      padding: 20px;
+    }
     #homeSection, #faqSection {
-      display:flex; flex-direction:column; align-items:flex-start;
-      text-align:left;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
     }
     #homeContent, #faqContent {
-      max-width:800px; white-space:pre-line; line-height:1.5; margin:auto;
+      max-width: 800px;
+      white-space: pre-line;
+      line-height: 1.5;
+      margin: auto;
     }
     #ledgerSection {
-      display:flex; flex-direction:column; align-items:center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    #tableContainer {width:100%; display:flex; justify-content:center}
-    .excel-table {border-collapse:collapse;box-shadow:0 0 5px rgba(0,0,0,0.1);background:#fff;}
-    .excel-table th, .excel-table td {border:1px solid #ccc; padding:6px 12px; text-align:left}
-    .excel-table th {background:#d3d3d3; text-align:center; font-weight:bold}
+    #tableContainer {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      overflow-x: auto;
+    }
+    .excel-table {
+      border-collapse: collapse;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+      background: #fff;
+      margin: 0;
+      width: 100%;
+      min-width: 600px;
+    }
+    .excel-table th, .excel-table td {
+      border: 1px solid #ccc;
+      padding: 6px 12px;
+      text-align: left;
+    }
+    .excel-table th {
+      background: #d3d3d3;
+      text-align: center;
+      font-weight: bold;
+    }
+    .excel-table a {
+      color: blue;
+      text-decoration: underline;
+      font-family: inherit;
+    }
     #certificationSection {
-      display:flex; flex-direction:column; align-items:center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: left;
     }
-    #certificateForm {display:flex; flex-direction:column; max-width:400px; width:100%; margin:auto}
-    #certificateForm label {margin-top:10px; font-weight:bold}
-    #certificateForm input {width:100%; padding:6px; margin-top:4px; font-family:inherit; box-sizing:border-box}
-    #certificateForm button {margin-top:15px; padding:8px 12px; font-family:inherit; font-weight:bold; cursor:pointer; border:1px solid #000; background:#e0e0e0}
-    #newsletterSection {display:flex; flex-direction:column; align-items:center; text-align:center}
+    #certificationContent {
+      max-width: 800px;
+      white-space: pre-line;
+      line-height: 1.5;
+      margin: 0 auto;
+      text-align: left;
+    }
+    #newsletterSection {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .section { padding: 10px; }
+      nav a { margin: 5px 8px; font-size: 0.9em; }
+      #homeContent, #faqContent, #certificationContent { max-width: 100%; padding: 0 10px; }
+      .excel-table { min-width: 100%; }
+    }
   </style>
 </head>
 <body>
@@ -55,35 +117,35 @@
 
   <div id="homeSection" class="section">
     <div id="homeContent">
-The curved beauty, durable compound materials and sheer raw utility of the modern mug... It is easy to forget just how far mug technology have come from neolithic times and until today.
+      The curved beauty, durable compound materials and sheer raw utility of the modern mug... It is easy to forget just how far mug technology have come from neolithic times and until today.
 
-Combined with the brittle elegance and soft whisper of a thousand consumed beverages, that places that unique nostalgic worth on each older mug, reminding us of a time long past but not yet forgotten.
+      Combined with the brittle elegance and soft whisper of a thousand consumed beverages, that places that unique nostalgic worth on each older mug, reminding us of a time long past but not yet forgotten.
 
-And on the mug chain it never will!
+      And on the mug chain it never will!
 
-All the advantages of the block chain and none of the shortcomings! Backed by cold, hard ceramics!
+      All the advantages of the block chain and none of the shortcomings! Backed by cold, hard ceramics!
 
-No longer are your mug just sitting in the cupboard or on the office kitchen table. Now it can also sit on the mug chain, digitally!
+      No longer are your mug just sitting in the cupboard or on the office kitchen table. Now it can also sit on the mug chain, digitally!
 
-Diversify your physical assets without divesting them!
+      Diversify your physical assets without divesting them!
 
-A certified mug on the mug chain becomes more desirable over time, probably*, accruing not only physical patina, but digital as well! That is twice the amount of patina in the same amount of time!
+      A certified mug on the mug chain becomes more desirable over time, probably*, accruing not only physical patina, but digital as well! That is twice the amount of patina in the same amount of time!
 
-Inheriting a mug that's on the mug chain takes it from "moms ol mug" and to a desirable collectible your kids are sure to fight** over!
+      Inheriting a mug that's on the mug chain takes it from "moms ol mug" and to a desirable collectible your kids are sure to fight** over!
 
-Before today mug buyers when reviewing a mug have often asked "Is that all?" and up until now it sadly was. Now you can proudly say "This mug has been on the mug chain since 2025!" and sit back as the bidding starts!
+      Before today mug buyers when reviewing a mug have often asked "Is that all?" and up until now it sadly was. Now you can proudly say "This mug has been on the mug chain since 2025!" and sit back as the bidding starts!
 
-Become part of the very first cohorts of mug chainiacs, as they so fondly call themselves, and <a href="#certificationSection">GET YOUR MUG CERTIFIED AND ON THE MUG CHAIN TODAY!</a>
+      Become part of the very first cohorts of mug chainiacs, as they so fondly call themselves, and <a href="#certificationSection">GET YOUR MUG CERTIFIED AND ON THE MUG CHAIN TODAY!</a>
 
-Before you only owned your mug physically, but now you can also own it digitally! With our certificate of certification you will even have proof! This also enables you to SELL your mug digitally, but keep it physically! Just one of the many benefits of mugenomics!
+      Before you only owned your mug physically, but now you can also own it digitally! With our certificate of certification you will even have proof! This also enables you to SELL your mug digitally, but keep it physically! Just one of the many benefits of mugenomics!
 
-And if, sadly, your mug becomes unmade in a child and/or alcohol related incident, the memory of that sweet, sweet mug will never dim, but live on forever, on the mug chain.
+      And if, sadly, your mug becomes unmade in a child and/or alcohol related incident, the memory of that sweet, sweet mug will never dim, but live on forever, on the mug chain.
 
-* Probably not
+      * Probably not
 
-** Possibly to the death
+      ** Possibly to the death
 
-- Copenhagen 23/5/2024
+      - Copenhagen 23/5/2024
     </div>
   </div>
 
@@ -95,62 +157,16 @@ And if, sadly, your mug becomes unmade in a child and/or alcohol related inciden
       </table>
     </div>
   </div>
-<div id="certificationSection" class="section">
-  <p><strong>Coming soon. Invite only for now!</strong></p>
 
-  <form action="https://api.web3forms.com/submit" method="POST">
+  <div id="certificationSection" class="section">
+    <div id="certificationContent">
+      <p>How you do it: Click the link, fill out the form with the geographical origin of the cup (Where is it now), the historical provenance (Is it for example your favorite coffee mug or maybe a special mug your granddad used?), put in the current owner or leave blank for maximum anonymity, upload a picture of the mug. Now pay a small handling fee and you are done!</p>
+      <p>Your mug will be added to the mug ledger and your picture to the mug chain on Instagram PLUS you will receive a beautiful, digital certificate proving that you are the proud owner of the digital version of your mug!</p>
+      <p><a href="https://goblinfab.com/products/get-any-mug-on-the-mug-chain" target="_blank">Go get your mug certified!</a></p>
+      <p><a href="https://goblinfab.com/products/awesome-coffee-mug-for-making-me-back-my-money-11oz" target="_blank">Promo! Buy a mug and get the certification for free!</a></p>
+    </div>
+  </div>
 
-    <!-- REQUIRED: Your Access key here. Don't worry this can be public -->
-    <!-- Create your Access key here: https://web3forms.com/ -->
-    <!-- <input type="hidden" name="apikey" value="YOUR_ACCESS_KEY_HERE"> -->
-    <input type="hidden" name="access_key" value="4aa765b9-61a1-4e9e-a00d-5d8a7ba7f380">
-
-    <!-- Optional: Can be type="hidden" or type="text" for subject -->
-    <input type="hidden" name="subject" value="New Submission from Web3Forms">
-  
-    <!-- Optional: From Name you want to see in the email
-          Default is "Notifications". you can overwrite here -->
-    <input type="hidden" name="from_name" value="Your Website Name">
-  
-    <!-- Optional: To send the form submission as CC email -->
-    <input type="hidden" name="ccemail" value="partner@example.com">
-
-    <!-- Optional: default replyto will be "email" (if available), 
-         you may overwrite here -->
-    <input type="hidden" name="replyto" value="troels@mbfv2.dk">
-    
-
-    <!-- Required: if submitting without Javascript 
-         (because by default web3form outputs json) -->
-
-    <!-- If javascript, use "window.location.hash" for redirects -->
-    <input type="hidden" name="redirect" value="https://web3forms.com/success">
-
-    <!-- Optional: But Recommended: To Prevent SPAM Submission. 
-         Make sure its hidden by default -->
-    <input type="checkbox" name="botcheck" id="" style="display: none;">
-    
-    <!-- Webhooks: Send your form data to Notion, Google Sheets or Zapier.
-         This feature available to PRO & Starter Plan users only -->
-    <input type="hidden" name="webhook" value="WEBHOOK_URL_HERE" />
-
-    <!-- Google reCaptcha v3: To Prevent SPAM Submission.PRO Plan only -->
-    <input type="hidden" name="recaptcha_response" id="recaptchaResponse">
-    
-    <!-- Attachments: Make sure the <form> has enctype="multipart/form-data"
-         This feature available to PRO Plan users only -->
-    <input type="file" name="attachment" />
-
-    <!-- Custom Form Data: 
-     Then you can include your own form data you wish to receive in email. -->
-    <input type="email" name="email" required>
-    <input type="text" name="First Name" required>
-    <input type="text" name="Phone Number" required>
-    <textarea name="message" cols="30" rows="10" required></textarea>
-
-    <button type="submit">Submit Form</button>
-
-</form></div>
   <div id="newsletterSection" class="section">
     <p>Coming soon!</p>
   </div>
@@ -250,20 +266,6 @@ A: Well, if you know the egg is round you might not balance it. Fortunately for 
         })
         .catch(err=>console.error('Failed to load ledger:',err));
     }
-    document.getElementById('certificateForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const form = e.target;
-      const formData = new FormData(form);
-      fetch(form.action, {
-        method: form.method,
-        body: formData
-      })
-      .then(res => {
-        if (res.ok) alert('Certification request submitted!');
-        else alert('Submission failed: ' + res.status + ' ' + res.statusText);
-      })
-      .catch(err => alert('Error submitting: ' + err));
-    });
   </script>
 </body>
 </html>
